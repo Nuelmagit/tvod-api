@@ -5,8 +5,10 @@ const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const bodyParser = require("body-parser");
-//mongo
+const cors = require('cors')
+// //mongo
 
+app.use(cors());
 mongoose.connect("mongodb://root:example@mongo:27017/curso?authSource=admin", {
   autoReconnect: true,
   useNewUrlParser: true
@@ -24,9 +26,9 @@ db.once("open", () => {
 
 //routes
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// // parse application/json
+// app.use(bodyParser.json());
 app.use(routes);
 
 app.listen(3000, function() {
