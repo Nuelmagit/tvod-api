@@ -1,7 +1,7 @@
 const sht = {
-    api: 'pixellot-api-stg.univtec.com',
+    api: 'sht-api.univtec.com',
     path: 'index.php',
-    user: 'msp_portal',
+    user: 'sht_portal',
     password: 'Univtec1@'
 }
 
