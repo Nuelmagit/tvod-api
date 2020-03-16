@@ -4,21 +4,10 @@ services:
   api:
     build: .
     restart: always
-    depends_on:
-      - mongo
+    environment:
+      API_PORT: 7486
+    ports:
+      - 7486:7486
     volumes:
       - ./:/home/node
       - /home/node/node_modules
-  mongo:
-    image: mongo:bionic
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-  rproxy:
-    image: nginx:alpine
-    depends_on:
-      - api
-    ports:
-      - 82:80
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf

@@ -1,11 +1,17 @@
+FROM node:12-alpine as buildContainer
+WORKDIR /app
+COPY . /app
+RUN npm install --production
+
 FROM node:10.16-alpine
 
-RUN npm install -g nodemon
+WORKDIR /app
 
-COPY . /home/node
+# Get all the code needed to run the app
+COPY --from=buildContainer /app /app
 
-WORKDIR /home/node
+# Expose the port the app runs in
+EXPOSE 3000
 
-RUN npm install
-
-CMD ["nodemon", "-L", "--exitcrash", "index"]
+# Serve the app
+CMD ["node", "index.js"]
