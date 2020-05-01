@@ -19,10 +19,18 @@ const msp = {
     password: 'Univtec1@'
 }
 
+const pxs = {
+    api: 'pixellot-api-stg.univtec.com',
+    path: 'index.php',
+    user: 'msp_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
-    msp
+    msp,
+    pxs
 };
 
 module.exports = customers;
