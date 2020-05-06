@@ -9,5 +9,5 @@ services:
     ports:
       - 7486:7486
     volumes:
-      - ./:/home/node
-      - /home/node/node_modules
+      - ./:/app
+      - /app/node_modules

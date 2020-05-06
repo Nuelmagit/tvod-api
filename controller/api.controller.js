@@ -66,7 +66,7 @@ const api = require('../api');
 // });
 
 router.post("/", paginator, function (req, res) {
-  
+
   let body = '';
   let petition = req.originalUrl;
   petition = petition.replace('/api', '').replace('?customer=' + req.query.customer, '');
@@ -85,8 +85,23 @@ router.post("/", paginator, function (req, res) {
 
 router.get("/", paginator, function (req, res) {
   let body = '';
-  let petition = req.originalUrl;
-  petition = petition.replace('/api', '').replace('?customer=' + req.query.customer, '');
+  let params = '';
+  let petition = req.originalUrl.replace('/api', '')
+  let splitted = petition.split('?customer=' + req.query.customer)
+  petition = splitted[0];
+
+  if (splitted[1].length > 0) {
+    splitted[1].split('&').forEach(element => {
+      if (element.length > 0) {
+        params += element + '&';
+      }
+    });
+  }
+  
+  if(params.length > 0){
+    petition += '?' + params; 
+  }
+
   req.setEncoding('utf8');
   req.on('data', function (chunk) {
     body += chunk;
