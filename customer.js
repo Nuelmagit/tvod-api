@@ -22,7 +22,7 @@ const msp = {
 const pxs = {
     api: 'pixellot-api-stg.univtec.com',
     path: 'index.php',
-    user: 'msp_portal',
+    user: 'pxs_portal',
     password: 'Univtec1@'
 }
 
