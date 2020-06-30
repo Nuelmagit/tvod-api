@@ -19,7 +19,14 @@ const get = function (req, res) {
             data += chunk;
         });
         resp.on('end', () => {
-            res.json(JSON.parse(data));
+            let response = null;
+            try {
+                response = JSON.parse(data);
+            } catch (e) {
+                response = {content: null};
+            }
+    
+            res.json(response);
         });
 
     }).on("error", (err) => {
