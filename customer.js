@@ -27,7 +27,7 @@ const pxs = {
 }
 
 const pxd = {
-    api: 'http://pxd-api.univtec.com/',
+    api: 'pxd-api.univtec.com',
     path: 'index.php',
     user: 'pxd_portal',
     password: 'Univtec1@'
