@@ -26,11 +26,19 @@ const pxs = {
     password: 'Univtec1@'
 }
 
+const pxd = {
+    api: 'http://pxd-api.univtec.com/',
+    path: 'index.php',
+    user: 'pxd_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
     msp,
-    pxs
+    pxs,
+    pxd
 };
 
 module.exports = customers;
