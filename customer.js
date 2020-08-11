@@ -33,12 +33,20 @@ const pxd = {
     password: 'Univtec1@'
 }
 
+const cly = {
+    api: 'cly-api.univtec.com',
+    path: 'index.php',
+    user: 'cly_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
     msp,
     pxs,
-    pxd
+    pxd,
+    cly
 };
 
 module.exports = customers;
