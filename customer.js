@@ -40,13 +40,21 @@ const cly = {
     password: 'Univtec1@'
 }
 
+const ecy = {
+    api: 'ecy-api.univtec.com',
+    path: 'index.php',
+    user: 'ecy_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
     msp,
     pxs,
     pxd,
-    cly
+    cly,
+    ecy
 };
 
 module.exports = customers;
