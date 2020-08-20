@@ -47,6 +47,13 @@ const ecy = {
     password: 'Univtec1@'
 }
 
+const cbn = {
+    api: 'cbn-api.univtec.com',
+    path: 'index.php',
+    user: 'cbn_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -54,7 +61,8 @@ const customers = {
     pxs,
     pxd,
     cly,
-    ecy
+    ecy,
+    cbn
 };
 
 module.exports = customers;
