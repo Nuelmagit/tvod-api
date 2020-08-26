@@ -61,6 +61,13 @@ const air = {
     password: 'Univtec1@'
 }
 
+const dum = {
+    api: 'dum-api.univtec.com',
+    path: 'index.php',
+    user: 'dum_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -70,7 +77,8 @@ const customers = {
     cly,
     ecy,
     cbn,
-    air
+    air,
+    dum
 };
 
 module.exports = customers;
