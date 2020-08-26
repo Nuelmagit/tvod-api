@@ -54,6 +54,13 @@ const cbn = {
     password: 'Univtec1@'
 }
 
+const air = {
+    api: 'air-api.univtec.com',
+    path: 'index.php',
+    user: 'air_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -62,7 +69,8 @@ const customers = {
     pxd,
     cly,
     ecy,
-    cbn
+    cbn,
+    air
 };
 
 module.exports = customers;
