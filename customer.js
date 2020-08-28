@@ -68,6 +68,34 @@ const dum = {
     password: 'Univtec1@'
 }
 
+const alo = {
+    api: 'alo-api.univtec.com',
+    path: 'index.php',
+    user: 'alo_portal',
+    password: 'Univtec1@'
+}
+
+const ana = {
+    api: 'ana-api.univtec.com',
+    path: 'index.php',
+    user: 'ana_portal',
+    password: 'Univtec1@'
+}
+
+const mon = {
+    api: 'mon-api.univtec.com',
+    path: 'index.php',
+    user: 'mon_portal',
+    password: 'Univtec1@'
+}
+
+const pth = {
+    api: 'pth-api.univtec.com',
+    path: 'index.php',
+    user: 'pth_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -78,7 +106,10 @@ const customers = {
     ecy,
     cbn,
     air,
-    dum
+    dum,
+    alo,
+    mon,
+    pth
 };
 
 module.exports = customers;
