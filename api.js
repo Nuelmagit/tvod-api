@@ -1,8 +1,22 @@
 const http = require('http');
 const customerData = require('./customer');
 
+function getCustomer(customer) {
+    const customerObj = customerData[customer];
+    if (customerObj) {
+        return customerObj;
+    } else {
+        return {
+            api: customer + '-api.univtec.com',
+            path: 'index.php',
+            user: customer + '_portal',
+            password: 'Univtec1@'
+        }
+    }
+}
+
 const get = function (req, res) {
-    const customer = req.query.customer;
+    const customer = getCustomer(req.query.customer);
     const options = {
         host: customerData[customer].api,
         path: '/' + customerData[customer].path + req.petition,
@@ -23,9 +37,11 @@ const get = function (req, res) {
             try {
                 response = JSON.parse(data);
             } catch (e) {
-                response = {content: null};
+                response = {
+                    content: null
+                };
             }
-    
+
             res.json(response);
         });
 
@@ -37,7 +53,7 @@ const get = function (req, res) {
 }
 
 const post = function (req, res) {
-    const customer = req.query.customer;
+    const customer = getCustomer(req.query.customer);
     const options = {
         host: customerData[customer].api,
         path: '/' + customerData[customer].path + req.petition,
