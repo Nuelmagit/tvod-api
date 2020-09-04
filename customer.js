@@ -96,6 +96,13 @@ const pth = {
     password: 'Univtec1@'
 }
 
+const pfs = {
+    api: 'pfs-api.univtec.com',
+    path: 'index.php',
+    user: 'pfs_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -110,7 +117,8 @@ const customers = {
     ana,
     alo,
     mon,
-    pth
+    pth,
+    pfs
 };
 
 module.exports = customers;
