@@ -103,6 +103,20 @@ const pfs = {
     password: 'Univtec1@'
 }
 
+const fof = {
+    api: 'fof-api.univtec.com',
+    path: 'index.php',
+    user: 'fof_portal',
+    password: 'Univtec1@'
+}
+
+const shm = {
+    api: 'shm-api.univtec.com',
+    path: 'index.php',
+    user: 'shm_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -118,7 +132,9 @@ const customers = {
     alo,
     mon,
     pth,
-    pfs
+    pfs,
+    fof,
+    shm
 };
 
 module.exports = customers;
