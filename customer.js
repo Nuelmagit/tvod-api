@@ -117,6 +117,27 @@ const shm = {
     password: 'Univtec1@'
 }
 
+const alr = {
+    api: 'alr-api.univtec.com',
+    path: 'index.php',
+    user: 'alr_portal',
+    password: 'Univtec1@'
+}
+
+const bcy = {
+    api: 'bcy-api.univtec.com',
+    path: 'index.php',
+    user: 'bcy_portal',
+    password: 'Univtec1@'
+}
+
+const cvr = {
+    api: 'cvr-api.univtec.com',
+    path: 'index.php',
+    user: 'cvr_portal',
+    password: 'Univtec1@'
+}
+
 const customers = {
     sht,
     mta,
@@ -134,7 +155,10 @@ const customers = {
     pth,
     pfs,
     fof,
-    shm
+    shm,
+    alr,
+    bcy,
+    cvr
 };
 
 module.exports = customers;
